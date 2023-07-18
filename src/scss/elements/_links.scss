@@ -1,0 +1,28 @@
+.link-big {
+    color: $blue_regular;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 2rem;
+    padding: 0 0.25rem;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: $blue_regular;
+    }
+}
+
+a[rel="tag"]{
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
+    color: white;
+    background-color: $blue_regular;
+    text-decoration: none;
+    &:nth-child(odd){
+        background-color: $blue_dark;
+    }
+}

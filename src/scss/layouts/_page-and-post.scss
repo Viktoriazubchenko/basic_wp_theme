@@ -1,0 +1,9 @@
+.site-content {
+    margin-top: 5rem;
+}
+@include _medium {
+    .site-content {
+        margin-top: 3rem;
+    }
+   
+}

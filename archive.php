@@ -4,24 +4,23 @@
 
 <div id="primary">
     <div id="main" class="site-main" role="main">
+        <?php get_template_part('template-parts/content', 'small-hero')?>
         <?php
         if ( have_posts() ) : ?>
-            <div class="container">
-                <div class="row">
-                    <header class="page__header">
-                        <h1 class="page__title">
-                            <?php single_post_title(); ?>
-                        </h1>
-					</header>
+            <section class="post-cat-archive">
+                <div class="container-default">
+                    <div class="post-cat-archive__grid">
+                        <?php
+                        while ( have_posts() ) : the_post();  ?>
+                        <div class="post-card post-card-vertical post-card-no-cat">
+                            <?php get_template_part('template-parts/content', 'post-card'); ?>
+                        </div>
+                        <?php endwhile;
+                        ?>
+                    </div>  
+                    <?php get_template_part('template-parts/pagination')?>
                 </div>
-                <div class="row">
-                <?php
-                    while ( have_posts() ) : the_post(); 
-                    get_template_part('template-parts/content', 'post-card');
-                    endwhile;
-                ?>
-                </div>  
-            </div>
+            </section>
         <?php 
         else: get_template_part('template-parts/content', 'none');
         endif; ?>

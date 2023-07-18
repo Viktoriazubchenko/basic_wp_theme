@@ -1,12 +1,9 @@
 <?php
 
 function register_custom_menus() {
-  register_nav_menus(
-    array(
-      'header-menu' => __( 'Header Menu' ),
-      'footer-menu' => __( 'Footer Menu' )
-     )
-   );
+    register_nav_menu('main_menu', 'Main Menu');
+    register_nav_menu('footer_primary_menu','Footer Primary Menu');
+    register_nav_menu('footer_secondary_menu','Footer Secondary Menu');
 }
 
 

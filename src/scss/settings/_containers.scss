@@ -1,0 +1,30 @@
+@import 'tools/mixins';
+
+.container-post {
+    width: 100%;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15%;
+    padding-left: 15%;
+    @include _medium {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+.container-default {
+    width: 100%;
+    max-width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 3%;
+    padding-left: 3%;
+    @include _medium {
+        padding-right: 1rem;
+        padding-left: 1rem;
+    }
+}
+
+
+

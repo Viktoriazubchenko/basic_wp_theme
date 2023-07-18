@@ -1,0 +1,130 @@
+.main-cat-grid {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &__heading {
+        text-align: center;
+        h2 {
+            span {
+                color: $blue_dark;
+            }
+        }
+    }
+    &__subheading {
+        display: flex;
+        align-items: baseline;
+        display: flex;
+        gap: 0.5rem;
+        margin-bottom: 1.5rem;
+        margin-top: 3rem;
+        span {
+            background-color: $blue_dark;
+            display: block;
+            flex-grow: 1;
+            height: 1px;
+        }
+        a {
+            display: block;
+            color: $black_light;
+            text-decoration: none;
+        }
+    }
+
+    &__body {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 1rem;
+        .post-card {
+            &:nth-child(1) {
+               
+            }
+            &:nth-child(2) {
+               
+            }
+            &:nth-child(3) {
+                
+            }
+            &:nth-child(4) {
+                
+            }
+        }
+    }
+    &__main {
+        grid-area: 1 / 1 / 5 / 2;
+    }
+    
+    &__row {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 2rem;
+        grid-row-gap: 2rem;
+        .post-card {
+            flex: 1;
+        }
+    }
+    &__footer {
+        display: none;
+    }
+}
+
+@include _large {
+    .main-cat-grid {
+        &__body {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(4, 1fr);
+            grid-column-gap: 2rem;
+            grid-row-gap: 1rem;
+        }
+        &__main {
+            grid-area: 1 / 1 / 5 / 2;
+        }
+        
+        &__row {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+    }
+}
+
+@include _medium {
+    .main-cat-grid {
+        &__body {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        &__main {
+            grid-area: 2 / 1 / 4 / 2; 
+        }
+    }
+}
+
+@include _small {
+    .main-cat-grid {
+        &__subheading {
+            a {
+                display: none;
+            }
+        }
+        &__body {
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+        &__main {
+            grid-area: 1/ 1 / 4 / 2; 
+        }
+        &__row {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &__footer {
+            display: block;
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            margin-top: 2rem;
+        }
+    }
+}
+

@@ -1,0 +1,26 @@
+.widget_related_events_widget{
+    padding-bottom: 2rem;
+    .related-events__list {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 2rem;
+    }
+}
+
+@include _medium {
+    .widget_related_events_widget{
+        .related-events__list {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+}
+
+@include _small {
+    .widget_related_events_widget{
+        .related-events__list {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+ 

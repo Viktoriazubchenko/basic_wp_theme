@@ -3,7 +3,7 @@ function setup_theme(){
     add_theme_support( 'title-tag' );
     add_theme_support(
         'custom-logo',
-        [
+            [
             'header-text' => [
                 'site-title',
                 'site-description',
@@ -16,9 +16,7 @@ function setup_theme(){
     );
     
     add_theme_support( 'post-thumbnails' );
-    /**
-		 * Register image sizes.
-		 */
+   
 	
 
 }

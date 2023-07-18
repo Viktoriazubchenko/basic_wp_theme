@@ -1,0 +1,21 @@
+.small-hero {
+    padding-top: 3rem;
+    &__heading {
+        border-bottom: 1px solid $blue_dark;
+        padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
+    }
+    &__date {
+
+    }
+    &__cat-btn {
+        align-self: flex-end;
+    }
+    &__badges {
+        align-self: flex-end;
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}

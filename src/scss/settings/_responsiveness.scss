@@ -1,0 +1,36 @@
+
+@mixin small-header {
+    @media (max-width: 991.98px) { @content }
+};
+
+@mixin medium-header {
+    @media (max-width: 1199.98px) { @content }
+};
+
+
+
+
+
+@mixin _xxlarge {
+    @media (min-width: 1400px) { @content }
+};
+
+@mixin _xlarge {
+    @media (max-width: 1399.98px) { @content }
+};
+
+@mixin _large {
+    @media (max-width: 1199.98px) { @content }
+};
+
+@mixin _medium {
+    @media (max-width: 991.98px) { @content }
+};
+
+@mixin _small{
+    @media (max-width: 767.98px) { @content }
+};
+
+@mixin _xsmall{
+    @media (max-width: 575.98px) { @content }
+};

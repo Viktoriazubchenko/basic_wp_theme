@@ -4,31 +4,30 @@
 
 <div id="primary">
     <div id="main" class="site-main" role="main">
+        <?php get_template_part('template-parts/content', 'small-hero')?>
         <?php
         if ( have_posts() ) : ?>
-            <div class="container">
-                <div class="row">
-                    <header class="page__header">
-                        <h1 class="page__title">
-                            <?php single_post_title(); ?>
-                        </h1>
-					</header>
+            <section class="post-cat-archive">
+                <div class="container-default">
+                    <div class="post-cat-archive__grid post-cat-archive__grid-default">
+                        <?php
+                        while ( have_posts() ) : the_post();  ?>
+                        <div class="post-card post-card-vertical post-card-no-cat">
+                            <?php get_template_part('template-parts/content', 'post-card'); ?>
+                        </div>
+                        <?php endwhile;
+                        ?>
+                    </div>  
+                    <div class="post-cat-archive__pagination">
+                        <?php the_posts_pagination(array(
+                            'prev_text' => __( 'Back', 'viktoria' ),
+                            'next_text' => __( 'Onward', 'viktoria' ),
+                            'class' => 'pagination-numeric',
+                            'mid_size' => 5
+                        ));?>
+                    </div> 
                 </div>
-                <div class="row">
-                <?php
-                    while ( have_posts() ) : the_post(); 
-                    get_template_part('template-parts/content', 'post-card');
-                    endwhile;
-                ?>
-                </div>  
-                <div class="row">
-                <?php
-                    while ( have_posts() ) : the_post(); 
-                    get_template_part('template-parts/content', 'post-card-small');
-                    endwhile;
-                ?>
-                </div>  
-            </div>
+            </section>
         <?php 
         else: get_template_part('template-parts/content', 'none');
         endif; ?>

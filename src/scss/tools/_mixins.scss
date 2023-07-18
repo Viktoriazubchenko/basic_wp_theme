@@ -1,0 +1,11 @@
+// custom containers
+
+@mixin make-container($padding-l, $padding-r) {
+    width: 100%;
+    padding-right: $padding-r;
+    padding-left: $padding-l;
+    margin-right: auto;
+    margin-left: auto;
+}
+  
+

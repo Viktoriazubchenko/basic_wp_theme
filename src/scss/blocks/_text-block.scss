@@ -1,0 +1,30 @@
+.text-block {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &-light {
+        background-color: $blue_light;
+    }
+    &-white{
+        background-color: $font_white;
+    }
+    &-dark {
+        background-color: $blue_dark;
+        h2, li, p, a:not(.button){
+            color: $font_white;
+        }
+        .text-block__body {
+            .description {
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+    
+    &__buttons {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}

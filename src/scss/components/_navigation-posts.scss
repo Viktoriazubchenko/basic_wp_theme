@@ -1,0 +1,37 @@
+.post-navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 3rem;
+    .previous-post, .next-post {
+        a {
+            display: flex;
+            gap: 1rem;
+            text-decoration: none;
+        } 
+    }
+    .previous-post {
+        a {
+            flex-direction: column;
+        }
+    }
+    .next-post {
+        text-align: right;
+        a {
+            flex-direction: column-reverse;
+            align-items: flex-end;
+        }
+    }
+}
+
+@include _small {
+    .post-navigation {
+        .previous-post, .next-post {
+            a {
+                .post-title {
+                    display: none;
+                }
+            } 
+        }
+    }
+}

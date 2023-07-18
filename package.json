@@ -27,5 +27,8 @@
   },
   "author": "",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "create-guten-block": "^1.14.1"
+  }
 }

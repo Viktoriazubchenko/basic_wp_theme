@@ -1,0 +1,46 @@
+.posts-slider {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    .slick-track{
+        display: flex;
+    }
+    .slick-slide {
+        height: inherit;
+        margin: 0 .5rem;
+    }
+    &__controllers {
+        display: flex;
+        gap: 1rem;
+        padding-top: 2rem;
+        justify-content: flex-end;
+    }
+    &__dots {
+        .posts-slick-dots {
+            margin-left: 0;
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+            gap: 14px;
+            li {
+                list-style-type: none;
+                button {
+                    border: none;
+                    background-color: $blue_regular;
+                    text-indent: -9999em;
+                    border-radius: 50%;
+                    width: 14px;
+                    height: 14px;
+
+                }
+            }
+            .slick-active {
+                button {
+                    background-color: $blue_dark;
+                }
+            }
+        }
+        
+    }
+}
+
+

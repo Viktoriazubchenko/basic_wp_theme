@@ -25,6 +25,16 @@ export const styles = () => {
     .pipe(dest('dist/css'));
 }
 
+export const editor_styles = () => {
+  return src('src/scss/editor.scss')
+    .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(gulpif(PRODUCTION, postcss([ autoprefixer ])))
+    .pipe(gulpif(PRODUCTION, cleanCss({compatibility:'ie8'})))
+    .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
+    .pipe(dest('dist/css'));
+}
+
 export const images = () => {
   return src('src/images/**/*.{jpg,jpeg,png,svg,gif}')
     .pipe(gulpif(PRODUCTION, imagemin()))
@@ -65,11 +75,12 @@ export const scripts = () => {
 
 export const watchForChanges = () => {
   watch('src/scss/**/*.scss', styles);
+  watch('src/scss/**/*.scss', editor_styles);
   watch('src/images/**/*.{jpg,jpeg,png,svg,gif}', images);
   watch(['src/**/*','!src/{images,js,scss}','!src/{images,js,scss}/**/*'], copy);
   watch('src/js/**/*.js', scripts);
 }
 
-export const dev = series(clean, parallel(styles, images, copy, scripts), watchForChanges);
-export const build = series(clean, parallel(styles, images, copy, scripts));
+export const dev = series(clean, parallel(styles, editor_styles, images, copy, scripts), watchForChanges);
+export const build = series(clean, parallel(styles, editor_styles, images, copy, scripts));
 export default dev;

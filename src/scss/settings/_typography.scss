@@ -1,0 +1,134 @@
+@import 'responsiveness.scss';
+html {
+    font-size: 16px;
+} 
+@include _medium {
+    html {
+        font-size: 15px;
+    } 
+}
+
+@include _small {
+    html {
+        font-size: 14px;
+    } 
+}
+
+$poppins-font: 'Poppins', sans-serif;
+$code-font: 'Source Code Pro', monospace;
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    margin-bottom: 1rem;
+}
+h1.display {
+    font-size: 3.5rem;
+    line-height: 5rem;
+    font-weight: 200;
+    color: $black_regular;
+}
+h1 {
+    font-size: 3rem;
+    line-height: 4.5rem;
+    font-weight: 200;
+    color: $black_regular;
+}
+h2 {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    font-weight: 200;
+    color: $black_regular;
+}
+h3 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    font-weight: 200;
+    color: $black_regular;
+}
+h4 {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 200;
+    color: $black_regular;
+}
+h5 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 900;
+    color: $black_regular;
+}
+
+p, li, a:not(.b1, .sub, .button, .social-icon, .badge, .r1, .r2) {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+p, li, a {
+    color: $black_light;
+}
+
+a:not(.button, .social-icon) {
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: $blue_dark;
+    }
+}
+
+p.sub {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 200;
+
+}
+
+.sub {
+    p {
+        font-size: 1.5rem;
+        line-height: 2rem;
+        font-weight: 200;
+    }
+}
+
+.b1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.r1 {
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.r2 {
+    font-size: 1.3rem;
+    line-height: 2.1rem;
+    
+}
+
+.s1 {
+    font-size: 0.75rem;
+    line-height: 1rem;
+}
+
+.color-font {
+    color: $blue_dark;
+}
+
+
+
+ul.authors-list {
+    padding-left: 0;
+    li {
+        margin-bottom: 1rem;
+        list-style-type: none;
+    }
+}
+
+
+

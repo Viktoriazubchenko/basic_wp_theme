@@ -1,0 +1,22 @@
+.event-page {
+    &__grid {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        display: flex;
+        gap: 2rem;
+        .sidebar {
+            flex: 1;
+        }
+        .site-main {
+            flex: 1.5;
+        }
+    }
+}
+
+@include _medium {
+    .event-page {
+        &__grid {
+            flex-direction: column-reverse;
+        }
+    }
+}

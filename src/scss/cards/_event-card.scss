@@ -1,0 +1,148 @@
+.event-card {
+    height: 100%;
+    &__content {
+        height: 100%;
+        display: grid;
+        grid-template-rows: 15rem auto;
+    }
+    &__heading {
+        position: relative;
+        
+    }
+    &__body {
+        position: relative;
+        background-color: $blue_light;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+    &__date  {
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+        color: $font_white;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-100%);
+
+    }
+    &__meta {
+        text-transform: uppercase;
+        color: $blue_dark;
+    }
+    &__title {
+        color: $black_regular;
+        text-decoration: none;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__image {
+        height: 100%;
+        width: 100%;
+        margin-bottom: 0;
+        img {
+            width: 100%;
+            object-fit: cover;
+            height: 100%;
+        }
+        figcaption {
+            display: none;
+        }
+    }
+    &__level {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: $blue_dark;
+        span {
+            color: $font_white;
+        }
+    }
+    &__badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin-top: auto;
+    }
+    
+    /// types of cards
+    /// for Posts Slider
+    &-slide {
+        background-color: $font_white;
+        border: 1px solid #c6cedf;
+        box-shadow: 0 2px 4px rgba(33, 51, 67, 0.12);
+        .event-card__content {
+            grid-template-rows: 15rem auto;
+        }
+        
+    }
+    &-horizontal {
+        .event-card__content {
+            flex-direction: row;
+            gap: 1rem;
+        }
+        .event-card__heading {
+            flex: 1;
+        }
+        .event-card__body {
+            flex: 2; 
+        }
+        .event-card__image {
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .event-card__info-block{
+            display: none;
+        }  
+    }
+    &-minimum {
+        border: $small_border;
+        .event-card__body {
+            background-color: $font_white;
+        }
+        .event-card__content {
+            display: block;
+        }
+        .event-card__image {
+            display: none;
+        }
+        .event-card__category {
+            display: none;
+        }
+        .event-card__level {
+            display: none;
+        }
+        .event-card__date {
+            transform: translate(0);
+            top: unset;
+            bottom: 1rem;
+            right: 1rem;
+        }
+    }
+    
+    &-no-bages {
+        .event-card__bages {
+            display: none;
+        }
+    }
+}
+
+@include _xsmall {
+    .event-card {
+        &__content {
+            height: 100%;
+            display: grid;
+            grid-template-rows: 25rem auto;
+        }
+        &-slide {
+            .event-card__content {
+                grid-template-rows: 3fr 1fr;
+            }
+        }
+    }
+}

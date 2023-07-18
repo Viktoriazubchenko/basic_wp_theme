@@ -1,0 +1,15 @@
+section {
+   .heading {
+        margin-bottom: 2rem;
+        &-centered {
+            text-align: center;
+        }
+        &-colored {
+            .meta {
+                .b1 {
+                    color: $blue_dark;
+                }
+            }
+        }
+    }
+}

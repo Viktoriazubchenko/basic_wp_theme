@@ -1,0 +1,114 @@
+.frontpage-hero.decorative-bg {
+    background-color: $blue_dark;
+    &::after {
+        content: '';
+        display: block;
+        background-color: $blue_regular;
+        width: 100%;
+        height: 80%;
+        border-radius: 0% 0% 0% 50% / 0% 0% 0% 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+    &::before {
+        content: '';
+        display: block;
+        background-color: $blue_light;
+        width: 100%;
+        height: 70%;
+        border-radius: 0% 0% 0% 50% / 0% 0% 0% 50%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        z-index: 1;
+    }
+}
+
+.frontpage-hero {
+    width: 100%;
+    padding: 3%;
+    overflow: hidden;
+    position: relative;
+    &__block {
+        width: 100%;
+        height: 100%;
+        background-color: $font_white;
+        position: relative;
+        z-index: 3;
+        border-radius: 0.5rem;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 0;
+        padding-right: 0;
+        overflow: hidden;
+        .social-links {
+            display: flex;
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            gap: 1rem;
+        }
+    }
+    &__info {
+        padding: 3rem;
+        width: 40%;
+        .meta {
+            .b1 {
+                color: $blue_dark;
+            } 
+        }
+        &-full {
+            width: 100%;
+        }
+    }
+    &__image {
+        width: 55%;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50% 0% 0% 50% / 50% 0% 0% 50%;
+        }
+        
+    }
+    &__buttons {
+        display: flex;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
+
+@include _large {
+    .frontpage-hero {
+        padding: 3% 0;
+        &__block {
+            flex-direction: column-reverse;
+        }
+        &__info {
+            width: 100%;
+        }
+        &__image {
+            width: 100%;
+            img {
+                border-radius: 0% 0% 0% 50% / 50% 0% 0% 50%;
+            }
+        }
+    }
+}
+
+@include _xsmall {
+    .frontpage-hero {
+        &__block {
+            .social-links {
+                flex-direction: column;
+            }
+        }
+        &__info {
+            padding: 3rem 1rem;
+        }
+    }
+}
+
+

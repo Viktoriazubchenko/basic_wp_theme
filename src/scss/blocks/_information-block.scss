@@ -1,0 +1,56 @@
+.information-block {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    position: relative;
+    background-color: $blue_light;
+    &__wrapper {
+        display: flex;
+        gap: 3rem;
+    }
+    &__info {
+        flex: 1;
+    }
+    &__image {
+        flex: 1;
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; 
+        }
+    }
+    &__buttons {
+        display: flex;
+        gap: 1rem;
+    }
+    &-light {
+        background-color: $blue_light; 
+    }
+    &-dark {
+        background-color: $blue_dark; 
+        h2 {
+            color: $font_white;
+        }
+        p {
+            color: $font_white;
+        }
+    }
+    &-right {
+        .information-block__wrapper {
+            flex-direction: row-reverse;
+        }
+    }
+}
+@include _medium {
+    .information-block {
+        &__wrapper {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: 1rem;
+        }
+        &-right {
+            .information-block__wrapper {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+}

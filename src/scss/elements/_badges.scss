@@ -1,0 +1,15 @@
+.badge {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    padding: 0.2rem 0.5rem;
+    border-radius: 0;
+    color: white;
+    background-color: $blue_regular;
+    text-decoration: none;
+    &:nth-child(odd){
+        background-color: $blue_dark;
+    }
+}
+

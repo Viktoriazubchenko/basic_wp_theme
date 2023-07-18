@@ -1,0 +1,44 @@
+.faq-block {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    &__item {
+        margin-bottom: 2rem;
+    }
+    &__question {
+        background-color: $blue_dark;
+        border: 2px solid $blue_dark;
+        padding: 2rem 2rem;
+        color: $font_white;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 2rem;
+        .b1 {
+            p {
+                color: $font_white;
+                margin-bottom: 0;
+            } 
+        }
+    }
+    &__question.opened-question {
+        transition: all 0.5s ease-out;
+        span {
+            transform: rotate(-180deg);
+        }
+    }
+    &__answer {
+        background-color: $blue_light;
+        max-height: 0;
+        opacity: 0;
+        transition: max-height 0.5s ease-out, opacity 0.5s ease-out;
+        overflow: hidden;
+        a {
+            text-decoration: underline;
+        }
+    }
+    &__answer.show {
+        padding: 2rem 2rem;
+        max-height: fit-content;
+        opacity: 1;
+    }
+}

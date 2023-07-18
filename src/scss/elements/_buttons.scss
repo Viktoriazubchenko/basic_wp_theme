@@ -1,0 +1,111 @@
+.button {
+    height: 3rem;
+    border: 2px solid;
+    background-color: unset;
+    text-decoration: none;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+    transition: 0.25s;
+    &-default {
+        padding: 0 2rem;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+    &-icon {
+        width: 3rem;
+    }
+    &-outlined-white {
+        border-color: $font_white;
+        color: $font_white;
+        background-color: transparent;
+        &:hover {
+            box-shadow: 0 -3.25em 0 0 $font_white inset;
+            color: $blue_dark;
+        }
+    }
+    &-outlined-color {
+        border-color: $blue_dark;
+        color: $blue_dark;
+        background-color: transparent;
+        &:hover {
+            box-shadow: 0 -3.25em 0 0 $blue_dark inset;
+            color: $font_white;
+        }
+        
+    }
+    &-contained-color {
+        background-color: $blue_dark;
+        color: $font_white;
+        border-color: $blue_dark;
+        &:hover {
+            box-shadow: 0 -3.25em 0 0 $font_white inset;
+            color: $blue_dark;
+        }
+        
+    }
+    &-contained-white {
+        background-color: $font_white;
+        color: $blue_dark;
+        border-color: $font_white;
+        &:hover {
+            box-shadow: 0 -3.25em 0 0 $blue_dark inset;
+            color: $font_white;
+        }
+       
+    }
+    &-text-color {
+        background-color: transparent;
+        color: $blue_dark;
+        border: none;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+    &-text-white {
+        background-color: transparent;
+        color: white;
+        border: none;
+        text-decoration: underline;
+        text-decoration-thickness: 3px;
+    }
+}
+
+.slider-arrow-btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $blue_dark;
+    background-color: white;
+    border-radius: 100%;
+    border: 2px solid $blue_dark;
+    transition: 0.25s;
+    &:hover {
+        box-shadow: 0 -3.25em 0 0 $blue_dark inset;
+        color: $font_white;
+    } 
+}
+
+.navigation-arrow-btn {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: $blue_dark;
+    background-color: white;
+    border-radius: 100%;
+    border: 2px solid $blue_dark;
+    transition: 0.25s;
+    &:hover {
+        box-shadow: 0 -3.25em 0 0 $blue_dark inset;
+        color: $font_white;
+    } 
+}
+

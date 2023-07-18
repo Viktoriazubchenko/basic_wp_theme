@@ -1,0 +1,27 @@
+.pagination-numeric {
+    margin-top: 3rem;
+    .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+    .page-numbers {
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 900;
+        text-transform: uppercase;
+        text-decoration: none;
+        &:hover {
+            color: $blue_dark;
+        }
+    }
+    
+    .page-numbers.current {
+        text-decoration: underline;
+        color: $blue_dark;
+    }
+    .page-numbers.next, .prev{
+        display: flex;
+        align-items: center;
+    }
+}
